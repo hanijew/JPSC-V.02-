@@ -1,58 +1,64 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import cubeLeg from "../assets/cube-leg.png";
+
 
 interface ServiceProps {
   title: string;
   description: string;
-  icon: JSX.Element;
+  
+  icon?: JSX.Element;
 }
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Strategic Management Services",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <ChartIcon />,
+      "Providing corporate governance, financial oversight, and strategic direction to ensure long-term business success.",
   },
   {
-    title: "Project Management",
+    title: "Operational Support Services",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <WalletIcon />,
+      "Offering centralized procurement, supply chain management, human resources, and shared services for operational efficiency.",
+  },
+  {
+    title: "Technology and Brand Management Services",
+    description:
+      "Providing IT infrastructure support, technology consulting, data management, corporate branding, and market research to drive innovation and brand visibility.",
+  },
+  {
+    title: "Legal, Compliance, and Property Management",
+    description:
+      "Managing investments, optimizing portfolios, and ensuring effective profit distribution for maximum returns.",
   },
   {
     title: "Task Automation",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
+      "Ensuring regulatory compliance, managing legal affairs, protecting intellectual property, and overseeing real estate investments and facilities.",
   },
 ];
 
 export const Services = () => {
   return (
-    <section className="container py-24 sm:py-32">
-      <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
-            </span>
-            Services
-          </h2>
+    <section id="services">
+      <section className="container py-24 sm:py-32">
+        <div className="grid lg:grid-cols-[1fr,2fr] gap-8 place-items-start">
+          {/* Left Section: Heading and Description */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+                Our Services
+              </span>
+            </h2>
+            <p className="text-muted-foreground text-xl mt-4 mb-8">
+              Explore the wide range of services we offer to help your business
+              thrive.
+            </p>
+          </div>
 
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
-          </p>
-
-          <div className="flex flex-col gap-8">
-            {serviceList.map(({ icon, title, description }: ServiceProps) => (
+          {/* Right Section: Two-column layout for service cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceList.map(({ title, description }: ServiceProps) => (
               <Card key={title}>
-                <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-                    {icon}
-                  </div>
+                <CardHeader className="space-y-1 flex flex-col justify-start items-start gap-4">
                   <div>
                     <CardTitle>{title}</CardTitle>
                     <CardDescription className="text-md mt-2">
@@ -64,13 +70,7 @@ export const Services = () => {
             ))}
           </div>
         </div>
-
-        <img
-          src={cubeLeg}
-          className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
-          alt="About services"
-        />
-      </div>
+      </section>
     </section>
   );
 };

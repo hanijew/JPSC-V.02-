@@ -16,7 +16,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+
 
 interface RouteProps {
   href: string;
@@ -25,21 +25,26 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: "#about",
+    label: "About",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#missionandvision",
+    label: "Vision And Mission",
   },
   {
-    href: "#pricing",
-    label: "Pricing",
+    href: "#history",
+    label: "History",
   },
   {
-    href: "#faq",
-    label: "FAQ",
+    href: "#target",
+    label: "Target Markets",
   },
+  {
+    href: "#services",
+    label: "Services",
+  },
+ 
 ];
 
 export const Navbar = () => {
@@ -54,8 +59,12 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
-              ShadcnUI/React
+             <img
+                src="/src/assets/logo.png" // Update the path to your logo file
+                alt="JPSC Logo"
+                className="w-8 h-8 md:w-10 md:h-10 object-contain"
+              />
+              JPSC Group Holdings Inc.
             </a>
           </NavigationMenuItem>
 
@@ -79,7 +88,7 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                    JPSC Group Holdings Inc.
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -127,16 +136,17 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <a
+           {/* <a
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
+               
               <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
-            </a>
-
+              Github 
+            </a> */}
+            
             <ModeToggle />
           </div>
         </NavigationMenuList>
