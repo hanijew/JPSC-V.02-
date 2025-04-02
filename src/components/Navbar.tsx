@@ -16,6 +16,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
+import logo from "../assets/logo.png";
 
 
 interface RouteProps {
@@ -59,8 +60,8 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-             <img
-                src="/src/assets/logo.png" // Update the path to your logo file
+              <img
+                src={logo} // Use the imported logo variable
                 alt="JPSC Logo"
                 className="w-8 h-8 md:w-10 md:h-10 object-contain"
               />
@@ -72,10 +73,7 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
                   className="flex md:hidden h-5 w-5"
@@ -136,17 +134,6 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-           {/* <a
-              rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
-            >
-               
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github 
-            </a> */}
-            
             <ModeToggle />
           </div>
         </NavigationMenuList>
