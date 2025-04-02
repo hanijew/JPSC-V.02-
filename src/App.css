@@ -18,7 +18,7 @@
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 222.2 47.4% 11.2%; q
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -114,6 +114,86 @@
     --ring: 142.4 71.8% 29.2%;
   }
 }
+
+/* *=========== Yellow theme =========== */
+@layer base {
+  :root {
+    --background: 60 100% 95%;
+    --foreground: 60 100% 20%;
+    --card: 60 100% 95%;
+    --card-foreground: 60 100% 20%;
+    --popover: 60 100% 95%;
+    --popover-foreground: 60 100% 20%;
+    --primary: 60 100% 50%;
+    --primary-foreground: 60 100% 10%;
+    --secondary: 60 100% 90%;
+    --secondary-foreground: 60 100% 20%;
+    --muted: 60 100% 90%;
+    --muted-foreground: 60 100% 30%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 60 100% 10%;
+    --destructive: 10 84.2% 60.2%;
+    --destructive-foreground: 60 100% 95%;
+    --border: 60 100% 80%;
+    --input: 60 100% 80%;
+    --ring: 60 100% 40%;
+    --radius: 0.5rem;
+  }
+}
+
+/* *=========== Softer Yellow Theme =========== */
+
+
+/* *=========== Gold Theme =========== */
+@layer base {
+  :root {
+    --background: #FFFDFC; /* White background */
+    --foreground: 0 0% 0%; /* Black text */
+    --card:60 70% 80%; /* Darker yellow for cards */
+    --card-foreground: 100 0% 0%; /* Black text on cards */
+    --popover: 60 90% 85%; /* Darker yellow for popovers */
+    --popover-foreground: 10 0% 0%; /* Black text for popovers */
+    --primary: 45 90% 50%; /* Softer yellow for primary elements */ 
+    --primary-foreground: 0 0% 0%; /* Black text on primary elements */
+    --secondary: 60 70% 80%; /* Softer yellow for secondary elements */
+    --secondary-foreground: 0 0% 0%; /* Black text on secondary elements */
+    --muted: 60 90% 85%; /* Muted yellow for muted elements */
+    --muted-foreground: 0 0% 0%; /* Black text on muted elements */
+    --accent: 40 90% 55%; /* Softer accent yellow */
+    --accent-foreground: 0 0% 0%; /* Black text on accent elements */
+    --destructive: 0 0% 0%;/* Red for destructive actions */
+    --destructive-foreground: 60 100% 95%; /* Black text on destructive actions */
+    --border: 60 90% 75%; /* Softer border color */
+    --input: 60 90% 75%; /* Softer input background */
+    --ring: 70 90% 50%; /* Softer ring color */
+    --radius: 0.5rem; /* Border radius */
+  }
+
+  /* Dark Mode */
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 60 100% 50%; /* Bright yellow for primary elements */
+    --primary-foreground: 60 100% 10%; /* Text on primary elements */
+    --secondary: 60 100% 30%; /* Softer yellow for secondary elements */
+    --secondary-foreground: 0 0% 98%; /* Text on secondary elements */
+    --muted: 60 100% 15%; /* Muted yellow for muted elements */
+    --muted-foreground: 60 100% 64.9%; /* Text on muted elements */
+    --accent: 60 100% 15%; /* Accent yellow */
+    --accent-foreground: 0 0% 98%; /* Text on accent elements */
+    --destructive: 0 62.8% 30.6%; /* Red for destructive actions */
+    --destructive-foreground: 60 100% 95%; /* Text on destructive actions */
+    --border: 60 100% 30%; /* Border color */
+    --input: 60 100% 30%; /* Input background */
+    --ring: 60 100% 29.2%; /* Ring color */
+  }
+}
+
+
 
 @layer base {
   * {
