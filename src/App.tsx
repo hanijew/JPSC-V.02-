@@ -1,48 +1,71 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from "./components/About";
-{/*import { Cta } from "./components/Cta";*/}
 import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
 import { Navbar } from "./components/Navbar";
 import { Newsletter } from "./components/Newsletter";
-{/*import { Pricing } from "./components/Pricing";*/}
-import { ScrollToTop } from "./components/ScrollToTop";
 import { Services } from "./components/Services";
 import { Sponsors } from "./components/Sponsors";
-{/*import { Team } from "./components/Team";*/}
-{/*import { Testimonials } from "./components/Testimonials";*/}
-{/*import {Vision} from "./components/Vision";*/}
 import { Mission } from "./components/Missionandvision";
-{/*import { Herotwo } from "./components/Herotwo";*/}
-
+import { ScrollToTop } from "./components/ScrollToTop";
+import AnotherPage from "./AnotherPage";
+import Missionvisionanotherpage from "./Misionvision-another-page"; // Import the new page
 
 function App() {
   return (
-    
     <Router>
-      <Navbar />
-      <Hero />
-      {/* 
-      <Herotwo />*/} 
-      <Sponsors />
-      <About />
-      <Mission />
-      <HowItWorks />
-      <Features />
-      <Services />
-       {/*
-      <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing /> */}
-      <Newsletter />
-      {/* 
-      <FAQ />*/}
-      <Footer />
-      <ScrollToTop />
+      {/* Main layout wrapper */}
+      <div className="flex flex-col min-h-screen">
+        {/* Navbar is always displayed */}
+        <Navbar />
+
+        {/* Main content area */}
+        <div className="flex-grow">
+          <Routes>
+            {/* Route for the main page */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  {/* 
+                  <Herotwo /> 
+                  */}
+                  <Sponsors />
+                  <About />
+                  <Mission />
+                  <HowItWorks />
+                  <Features />
+                  <Services />
+                  {/* 
+                  <Cta />
+                  <Testimonials />
+                  <Team />
+                  <Pricing /> 
+                  */}
+                  <Newsletter />
+                  {/* 
+                  <FAQ /> 
+                  */}
+                  <ScrollToTop />
+                </>
+              }
+            />
+
+            {/* Route for AnotherPage */}
+            <Route path="/another" element={<AnotherPage />} />
+
+            {/* Route for Missionvisionanotherpage */}
+            <Route path="/missionvision-another" element={<Missionvisionanotherpage />} />
+          </Routes>
+        </div>
+
+        {/* Footer is always displayed */}
+        <Footer />
+      </div>
     </Router>
   );
 }

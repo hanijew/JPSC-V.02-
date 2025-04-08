@@ -17,7 +17,7 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import logo from "../assets/logo.png";
-
+import { useNavigate } from "react-router-dom";
 
 interface RouteProps {
   href: string;
@@ -45,11 +45,19 @@ const routeList: RouteProps[] = [
     href: "#services",
     label: "Services",
   },
- 
+  {
+    href: "/another", // Update the href to point to the AnotherPage route
+    label: "Another",
+  },
+  {
+  href: "/missionvision-another",
+  label: "Mission and Vision",
+  },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -141,3 +149,5 @@ export const Navbar = () => {
     </header>
   );
 };
+
+export default Navbar;
