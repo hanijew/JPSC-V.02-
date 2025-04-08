@@ -29,11 +29,11 @@ export const Hero = () => {
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <Button asChild className="w-full md:w-1/3">
-            <a href="#services">Services</a>
+            <a href="/services-another">Services</a>
           </Button>
 
             <a
-            href="#newsletter"
+            href="/Contact"
             className={`w-full md:w-1/3 ${buttonVariants({
               variant: "outline",
             })}`}

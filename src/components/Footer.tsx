@@ -1,4 +1,5 @@
 {/* import { LogoIcon } from "./Icons"; */}
+import logo from "../assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -12,7 +13,7 @@ export const Footer = () => {
             href="/"
             className="font-bold text-xl flex items-center"
             >
-            <img src="/src/assets/logo.png" alt="Company Logo" className="h-8 w-auto mr-2" />
+            <img src= {logo} alt="Company Logo" className="h-8 w-auto mr-2" />
             JPSC
             </a>
         </div>

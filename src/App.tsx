@@ -13,6 +13,11 @@ import { Mission } from "./components/Missionandvision";
 import { ScrollToTop } from "./components/ScrollToTop";
 import AnotherPage from "./AnotherPage";
 import Missionvisionanotherpage from "./Misionvision-another-page"; // Import the new page
+import Historyanotherpage from "./History-another-page"; // Import the new page
+import Targetmarketsanotherpage from "./Targetmarkets-another-page"; // Import the new page
+import Servicesanotherpage from "./Services-another-page";
+import Contact from "./Contact"; // Import the new page
+import { Cta } from "./components/Cta";
 
 function App() {
   return (
@@ -35,18 +40,20 @@ function App() {
                   <Herotwo /> 
                   */}
                   <Sponsors />
+                    
                   <About />
+                     {/* 
                   <Mission />
                   <HowItWorks />
                   <Features />
-                  <Services />
-                  {/* 
-                  <Cta />
+                  <Services />*/}
+                 
+                  <Cta /> {/* 
                   <Testimonials />
                   <Team />
                   <Pricing /> 
-                  */}
-                  <Newsletter />
+                  
+                  <Newsletter /> */}
                   {/* 
                   <FAQ /> 
                   */}
@@ -60,6 +67,15 @@ function App() {
 
             {/* Route for Missionvisionanotherpage */}
             <Route path="/missionvision-another" element={<Missionvisionanotherpage />} />
+
+            <Route path="/history-another" element={<Historyanotherpage />} />
+
+            <Route path="/targetmarkets-another" element={<Targetmarketsanotherpage />} />
+
+            <Route path="/services-another" element={<Servicesanotherpage />} />
+
+            
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
 
@@ -71,3 +87,4 @@ function App() {
 }
 
 export default App;
+

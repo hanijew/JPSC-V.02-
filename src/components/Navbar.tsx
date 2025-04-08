@@ -25,10 +25,7 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#about",
-    label: "About",
-  },
+ /*
   {
     href: "#missionandvision",
     label: "Vision And Mission",
@@ -48,11 +45,31 @@ const routeList: RouteProps[] = [
   {
     href: "/another", // Update the href to point to the AnotherPage route
     label: "Another",
-  },
+  }, 
   {
   href: "/missionvision-another",
   label: "Mission and Vision",
+  }, 
+  {
+    href: "/history-another",
+    label: "History",
+    },*/
+  {
+      href: "/history-another",
+      label: "History",
   },
+  {
+    href: "/targetmarkets-another",
+    label: "Target Markets",
+},
+{
+  href: "/services-another",
+  label: "Services",
+},
+{
+  href: "/contact",
+  label: "Contact",
+},
 ];
 
 export const Navbar = () => {
