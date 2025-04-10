@@ -17,7 +17,7 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import logo from "../assets/logo.png";
-import { useNavigate } from "react-router-dom";
+{/*import { useNavigate } from "react-router-dom"; */}
 
 interface RouteProps {
   href: string;

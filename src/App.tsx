@@ -1,15 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from "./components/About";
-import { Features } from "./components/Features";
+{/*import { Features } from "./components/Features"; */}
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
+{/*import { HowItWorks } from "./components/HowItWorks";*/}
 import { Navbar } from "./components/Navbar";
-import { Newsletter } from "./components/Newsletter";
-import { Services } from "./components/Services";
+{/*import { Newsletter } from "./components/Newsletter";*/}
+{/*import { Services } from "./components/Services";*/}
 import { Sponsors } from "./components/Sponsors";
-import { Mission } from "./components/Missionandvision";
+{/*import { Mission } from "./components/Missionandvision";*/}
 import { ScrollToTop } from "./components/ScrollToTop";
 import AnotherPage from "./AnotherPage";
 import Missionvisionanotherpage from "./Misionvision-another-page"; // Import the new page

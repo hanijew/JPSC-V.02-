@@ -1,10 +1,10 @@
 {
-  "name": "shadcn-landing-page-template",
-  "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
+  "name": "JPSC Website123",
+  "description": "JPSC",
   "author": {
-    "name": "Leopoldo Miranda",
-    "email": "leomirandadev@gmail.com",
-    "url": "https://github.com/leoMirandaa"
+    "name": "",
+    "email": "jpsc@gmail.com",
+    "url": "jpscgroup.com"
   },
   "license": "MIT",
   "keywords": [
@@ -43,6 +43,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.4.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
