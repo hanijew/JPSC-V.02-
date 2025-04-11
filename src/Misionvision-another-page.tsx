@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Vision } from "./components/Vision";
+import { Mission } from "./components/Missionandvision";
 
 const Misionvisionanotherpage: React.FC = () => {
   return (
     <>
       {/* Include the Navbar */}
      
-      <Vision   />
+      <Mission   />
       {/* Page Content */}
     
     </>

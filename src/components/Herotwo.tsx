@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 
 // Import images
-import logoImage from "/src/assets/logo.jpg";
-import image3 from "/src/assets/logo.jpg";
-import image4 from "/src/assets/logo.jpg";
+import logoImage from "/src/assets/logo.png";
+import image3 from "/src/assets/pilot.png";
+import image4 from "/src/assets/logo.png";
 
 const Herotwos = [
   {
@@ -89,7 +89,7 @@ export const Herotwo = () => {
   }, [currentTopicIndex]);
 
   return (
-    <section className="relative w-full h-[500px] bg-black text-white">
+    <section className="relative w-full h-[500px] bg-white text-white">
       {/* Background Image */}
       <div
         className={`absolute inset-0 bg-cover bg-center transition-transform duration-500`}

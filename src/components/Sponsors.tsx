@@ -49,10 +49,10 @@ export const Sponsors = () => {
       </h2>
 
       {/* Flex container for logos in a straight line */}
-      <div className="flex justify-center items-center gap-16">
+      <div className="flex justify-center items-center gap-16 ">
         {sponsors.map(({ icon }: SponsorProps, index) => (
-          <div key={index} className="flex items-center">
-            <span className="block">{icon}</span>
+          <div key={index} className="flex items-center ">
+            <span className="block transition-transform transform hover:scale-105 hover:shadow-lg">{icon}</span>
           </div>
         ))}
       </div>

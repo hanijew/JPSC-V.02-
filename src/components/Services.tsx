@@ -57,7 +57,10 @@ export const Services = () => {
           {/* Right Section: Two-column layout for service cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceList.map(({ title, description }: ServiceProps) => (
-              <Card key={title}>
+              <Card
+                key={title}
+                className="transition-transform transform hover:scale-105 hover:shadow-lg"
+              >
                 <CardHeader className="space-y-1 flex flex-col justify-start items-start gap-4">
                   <div>
                     <CardTitle>{title}</CardTitle>

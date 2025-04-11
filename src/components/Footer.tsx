@@ -16,8 +16,22 @@ export const Footer = () => {
             <img src= {logo} alt="Company Logo" className="h-8 w-auto mr-2" />
             JPSC
             </a>
+          <p className="mt-4 opacity-60">
+            JPSC Group Holdings Inc. is a leading provider of innovative solutions</p>
+            
+       
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
+            <span role="img" aria-label="phone">📞</span> +63 927-530-0844
+          </p>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            <span role="img" aria-label="email">📧</span> info@digitaloneph.com
+          </p>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            <span role="img" aria-label="location">📍</span> Kalayaan Ave, Makati, 1210 Metro Manila
+          </p>
+        
         </div>
-      {/*  
+        
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Follow US</h3>
           <div>
@@ -148,7 +162,7 @@ export const Footer = () => {
               Twitch
             </a>
           </div>
-        </div>*/}
+        </div>
       </section>
 
       <section className="container pb-14 text-center">

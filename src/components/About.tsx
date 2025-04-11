@@ -1,4 +1,3 @@
-
 import logo from "../assets/logo.png"; // Updated to import logo.jpg
 
 export const About = () => {
@@ -22,7 +21,9 @@ export const About = () => {
                 </span>
                 The Company
               </h2>
-              <p className="text-xl text-muted-foreground mt-5">
+              <p
+                className="text-lg  leading-relaxed mt-5"
+              >
                 JPSC Group Holdings Inc. is a dynamic holding company focused on strategic asset management and leveraging technology for operational efficiency.
                 We specialize in subleasing and managing office spaces and commercial properties and provide tailored solutions for businesses.
                 Committed to excellence, innovation, and transparency, we deliver lasting value to stakeholders with professionalism and integrity.

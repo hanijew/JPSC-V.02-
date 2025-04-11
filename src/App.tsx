@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About } from "./components/About";
+{/* import { About } from "./components/About"; */}
 {/*import { Features } from "./components/Features"; */}
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -18,7 +18,9 @@ import Targetmarketsanotherpage from "./Targetmarkets-another-page"; // Import t
 import Servicesanotherpage from "./Services-another-page";
 import Contact from "./Contact"; // Import the new page
 import { Cta } from "./components/Cta";
-
+import Aboutanotherpage from "./About-another-page"; // Import the new page
+import { Herotwo } from "./components/Herotwo";
+import { FAQ } from "./components/FAQ";
 function App() {
   return (
     <Router>
@@ -34,14 +36,16 @@ function App() {
             <Route
               path="/"
               element={
-                <>
+                <>      
                   <Hero />
-                  {/* 
-                  <Herotwo /> 
-                  */}
-                  <Sponsors />
+                 <Herotwo /> 
+           
+                
+                 
+                 
+                                
                     
-                  <About />
+                 {/*  <About /> */}
                      {/* 
                   <Mission />
                   <HowItWorks />
@@ -54,9 +58,10 @@ function App() {
                   <Pricing /> 
                   
                   <Newsletter /> */}
-                  {/* 
+                   
                   <FAQ /> 
-                  */}
+                  
+                  <Sponsors />  
                   <ScrollToTop />
                 </>
               }
@@ -73,12 +78,12 @@ function App() {
             <Route path="/targetmarkets-another" element={<Targetmarketsanotherpage />} />
 
             <Route path="/services-another" element={<Servicesanotherpage />} />
-
-            
+            <Route path="/about-another" element={<Aboutanotherpage />} />
+          
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-
+      
         {/* Footer is always displayed */}
         <Footer />
       </div>
