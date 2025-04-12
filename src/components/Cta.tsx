@@ -6,6 +6,7 @@ export const Cta = () => {
     <section
       id="cta"
       className="bg-muted/50 py-16 my-24 sm:my-32"
+        data-aos="fade-up"
     >
       <div className="container lg:grid lg:grid-cols-2 place-items-center">
         <div className="lg:col-start-1">

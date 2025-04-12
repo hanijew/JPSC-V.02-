@@ -3,23 +3,22 @@ import logo from "../assets/logo.png";
 
 export const Footer = () => {
   return (
-    <footer id="footer">
+    <footer id="footer" data-aos="fade-up">
       <hr className="w-11/12 mx-auto" />
 
       <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
-        <div className="col-span-full xl:col-span-2">
-            <a
+        <div className="col-span-full xl:col-span-2" data-aos="fade-right">
+          <a
             rel="noreferrer noopener"
             href="/"
             className="font-bold text-xl flex items-center"
-            >
-            <img src= {logo} alt="Company Logo" className="h-8 w-auto mr-2" />
+          >
+            <img src={logo} alt="Company Logo" className="h-8 w-auto mr-2" />
             JPSC
-            </a>
+          </a>
           <p className="mt-4 opacity-60">
-            JPSC Group Holdings Inc. is a leading provider of innovative solutions</p>
-            
-       
+            JPSC Group Holdings Inc. is a leading provider of innovative solutions
+          </p>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
             <span role="img" aria-label="phone">📞</span> +63 927-530-0844
           </p>
@@ -29,7 +28,6 @@ export const Footer = () => {
           <p className="text-lg text-gray-600 dark:text-gray-300">
             <span role="img" aria-label="location">📍</span> Kalayaan Ave, Makati, 1210 Metro Manila
           </p>
-        
         </div>
         
         <div className="flex flex-col gap-2">
@@ -168,14 +166,6 @@ export const Footer = () => {
       <section className="container pb-14 text-center">
         <h3>
           &copy; 2025 JPSC Group Holdings Inc{" "}
-               {/* Pricing  <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/leopoldo-miranda/"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda
-          </a>*/}
         </h3> 
       </section>
     </footer>

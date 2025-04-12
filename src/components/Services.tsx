@@ -38,7 +38,8 @@ const serviceList: ServiceProps[] = [
 
 export const Services = () => {
   return (
-    <section id="services">
+    <section id="services"
+    data-aos="fade-up">
       <section className="container py-24 sm:py-32">
         <div className="grid lg:grid-cols-[1fr,2fr] gap-8 place-items-start">
           {/* Left Section: Heading and Description */}

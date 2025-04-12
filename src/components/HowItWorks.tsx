@@ -34,6 +34,7 @@ export const HowItWorks = () => {
     <section
       id="history"
       className="container text-center py-24 sm:py-32"
+        data-aos="fade-up"
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
         Our{" "}
@@ -45,14 +46,14 @@ export const HowItWorks = () => {
         
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  ">
         {features.map(({ icon, title, description }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-muted/50"
+            className="bg-muted/50 transition-transform transform hover:scale-105 hover:shadow-lg"
           >
             <CardHeader>
-              <CardTitle className="grid gap-4 place-items-center">
+              <CardTitle className="grid gap-4 place-items-center ">
                 {icon}
                 {title}
               </CardTitle>

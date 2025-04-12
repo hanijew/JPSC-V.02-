@@ -43,7 +43,7 @@ const sponsors: SponsorProps[] = [
 
 export const Sponsors = () => {
   return (
-    <section id="sponsors" className="container pt-24 sm:py-32">
+    <section id="sponsors" className="fullscreen pt-24 sm:py-32 ">
       <h2 className="text-center text-md lg:text-6xl font-bold mb-8 text-primary">
         Our Subsidiaries
       </h2>

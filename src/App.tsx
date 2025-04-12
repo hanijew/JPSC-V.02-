@@ -1,15 +1,12 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-{/* import { About } from "./components/About"; */}
-{/*import { Features } from "./components/Features"; */}
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+import { useEffect } from "react";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
-{/*import { HowItWorks } from "./components/HowItWorks";*/}
 import { Navbar } from "./components/Navbar";
-{/*import { Newsletter } from "./components/Newsletter";*/}
-{/*import { Services } from "./components/Services";*/}
 import { Sponsors } from "./components/Sponsors";
-{/*import { Mission } from "./components/Missionandvision";*/}
 import { ScrollToTop } from "./components/ScrollToTop";
 import AnotherPage from "./AnotherPage";
 import Missionvisionanotherpage from "./Misionvision-another-page"; // Import the new page
@@ -21,7 +18,18 @@ import { Cta } from "./components/Cta";
 import Aboutanotherpage from "./About-another-page"; // Import the new page
 import { Herotwo } from "./components/Herotwo";
 import { FAQ } from "./components/FAQ";
+import { Testimonials } from "./components/Testimonials";
+import { Statistics } from "./components/Statistics";
+import { Pricing } from "./components/Pricing";
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
+
   return (
     <Router>
       {/* Main layout wrapper */}
@@ -38,29 +46,12 @@ function App() {
               element={
                 <>      
                   <Hero />
-                 <Herotwo /> 
-           
-                
-                 
-                 
-                                
-                    
-                 {/*  <About /> */}
-                     {/* 
-                  <Mission />
-                  <HowItWorks />
-                  <Features />
-                  <Services />*/}
-                 
-                  <Cta /> {/* 
+                  <Statistics />
+                  <Herotwo />
                   <Testimonials />
-                  <Team />
                   <Pricing /> 
-                  
-                  <Newsletter /> */}
-                   
+                
                   <FAQ /> 
-                  
                   <Sponsors />  
                   <ScrollToTop />
                 </>

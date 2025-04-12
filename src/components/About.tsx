@@ -5,6 +5,7 @@ export const About = () => {
     <section
       id="about"
       className="container py-24 sm:py-29"
+        data-aos="fade-up"
     >
       <div className="bg-muted/20 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">

@@ -28,6 +28,7 @@ export const Mission = () => {
     <section
       id="missionandvision"
       className="container text-center py-24 sm:py-32"
+        data-aos="fade-up"
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
         Our{" "}
@@ -44,7 +45,7 @@ export const Mission = () => {
           <Card
          
             key={title}
-            className="bg-muted/50 "
+            className="bg-muted/50  transition-transform transform hover:scale-105 hover:shadow-lg"
           >
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center ">

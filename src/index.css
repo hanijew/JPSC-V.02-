@@ -80,5 +80,5 @@ html {
   justify-content: center;
   align-items: center;
   height: 50vh; /* full screen height */
-  
+  width: 100vw; /* full screen width */
 }

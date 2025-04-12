@@ -1,16 +1,29 @@
-{/*import { HeroCards } from "./HeroCards";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input"; */}
+import emailjs from "emailjs-com";
 
 export const Newsletter = () => {
- 
- {/*} const handleSubmit = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Subscribed!");
-  }; */}
+
+    emailjs
+      .sendForm(
+        "service_cmcz0dj", // Correct EmailJS service ID
+        "template_wozlk4l", // Replace with your actual EmailJS template ID
+        e.currentTarget,
+        "ARJM8CFqSKUs9l1KR" // Correct EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.error("EmailJS Error:", error); // Log the error for debugging
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
 
   return (
-    <section id="newsletter">
+    <section id="newsletter" data-aos="fade-up">
       <hr className="w-11/12 mx-auto" />
 
       <div className="container py-24 sm:py-32">
@@ -20,22 +33,58 @@ export const Newsletter = () => {
             With Us
           </span>
         </h3>
-       {/* <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-          Lorem ipsum dolor sit amet consectetur.
-        </p> 
 
-        <form
-          className="flex flex-col w-full md:flex-row md:w-6/12 lg:w-4/12 mx-auto gap-4 md:gap-2"
-          onSubmit={handleSubmit}
-        >
-          <Input
-            placeholder="leomirandadev@gmail.com"
-            className="bg-muted/50 dark:bg-muted/80 "
-            aria-label="email"
-          />
-          <Button>Subscribe</Button>
-        </form> 
-        */}
+        {/* Contact Form Section */}
+        <section className="container py-10">
+          <h3 className="text-2xl font-bold text-center mb-6">Contact Us</h3>
+          <form onSubmit={sendEmail} className="max-w-lg mx-auto space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-lg font-medium">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full p-2 border rounded-lg"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div>
+              <label htmlFor="address" className="block text-lg font-medium">
+                Address
+              </label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                required
+                className="w-full p-2 border rounded-lg"
+                placeholder="Enter your address"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-lg font-medium">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                className="w-full p-2 border rounded-lg"
+                rows={4}
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary-dark"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
 
         {/* Contact Information Section */}
         <div className="text-center mt-12">

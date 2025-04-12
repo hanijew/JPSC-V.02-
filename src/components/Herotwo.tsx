@@ -2,45 +2,47 @@ import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 
 // Import images
-import logoImage from "/src/assets/logo.png";
-import image3 from "/src/assets/pilot.png";
-import image4 from "/src/assets/logo.png";
+import tech from "/src/assets/itservices.jpg";
+import strat from "/src/assets/strategicmanagement.png";
+import taskauto from "/src/assets/taskauto.webp";
+import op from "/src/assets/operational.jpg";
+import legal from "/src/assets/legal.jpeg";
 
 const Herotwos = [
   {
-    title: "Financial Services",
+    title: "Strategic Management Services",
     description:
       "Accelerating queries and transactions to transform data into actionable insights.",
-    image: image3,
-    buttonText: "Financial Services",
+    image: strat,
+    buttonText: "Strategic Management Services",
   },
   {
-    title: "Product Design",
+    title: "Technology and Brand Management Services",
     description:
-      "Empowering designers with tools to create innovative products faster.",
-    image: logoImage,
-    buttonText: "Product Design",
+      "Technology and Brand Management Services",
+    image: tech,
+    buttonText: "Technology and Brand Management Services",
   },
   {
-    title: "HCI and Virtualization",
+    title: "Task Automation",
     description:
       "Optimizing hyper-converged infrastructure for seamless virtualization.",
-    image: image3,
-    buttonText: "HCI and Virtualization",
+    image:  taskauto,
+    buttonText: "Task Automation",
   },
   {
-    title: "Database and Analytics",
+    title: "Operational Support Services",
     description:
       "Accelerating queries and transactions to transform data into actionable insights.",
-    image: image4,
-    buttonText: "Database and Analytics",
+    image: op,
+    buttonText: "Operational Support Services",
   },
   {
-    title: "Supercomputing and Research",
+    title: "Legal,Compliance, and Property Management",
     description:
       "Driving breakthroughs in research with high-performance computing.",
-    image: image4,
-    buttonText: "Supercomputing and Research",
+    image: legal,
+    buttonText: "Legal,Compliance, and Property Management",
   },
 ];
 

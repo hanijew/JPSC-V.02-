@@ -115,8 +115,15 @@ export const Features = () => {
   };
 
   return (
-    <section id="target" className="container py-24 sm:py-32 space-y-8">
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
+    <section
+      id="target"
+      className="container py-24 sm:py-32 space-y-8"
+      data-aos="fade-up"
+    >
+      <h2
+        className="text-3xl lg:text-4xl font-bold md:text-center"
+        data-aos="fade-right"
+      >
         Our{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Target Markets
@@ -124,7 +131,7 @@ export const Features = () => {
       </h2>
 
       {/* Horizontal Scrollable Slideshow */}
-      <div className="relative">
+      <div className="relative" data-aos="fade-left">
         <button
           onClick={scrollLeft}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full"

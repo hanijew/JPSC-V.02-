@@ -64,47 +64,38 @@ export const Testimonials = () => {
     <section
       id="testimonials"
       className="container py-24 sm:py-32"
+        data-aos="fade-up"
     >
-      <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
+      <h2 className="text-3xl md:text-4xl font-bold text-center">
+        Message from the
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          People Love{" "}
+          CEO {" "}
         </span>
-        This Landing Page
       </h2>
 
-      <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
-      </p>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
-        {testimonials.map(
-          ({ image, name, userName, comment }: TestimonialProps) => (
-            <Card
-              key={userName}
-              className="max-w-md md:break-inside-avoid overflow-hidden"
-            >
-              <CardHeader className="flex flex-row items-center gap-4 pb-2">
-                <Avatar>
-                  <AvatarImage
-                    alt=""
-                    src={image}
-                  />
-                  <AvatarFallback>OM</AvatarFallback>
-                </Avatar>
-
-                <div className="flex flex-col">
-                  <CardTitle className="text-lg">{name}</CardTitle>
-                  <CardDescription>{userName}</CardDescription>
-                </div>
-              </CardHeader>
-
-              <CardContent>{comment}</CardContent>
-            </Card>
-          )
-        )}
+      <div className="mt-8 p-8 border rounded-lg shadow-lg ">
+        <div className="flex items-center gap-6">
+          <div className="flex-shrink-0">
+            <Avatar>
+              <AvatarImage
+                alt="CEO Avatar"
+                src="https://github.com/shadcn.png"
+              />
+              <AvatarFallback>CEO</AvatarFallback>
+            </Avatar>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold">John Doe React</h3>
+            <p className="text-muted-foreground">@john_Doe</p>
+          </div>
+        </div>
+        <p className="mt-6 text-lg leading-relaxed ">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat."
+        </p>
       </div>
     </section>
   );
