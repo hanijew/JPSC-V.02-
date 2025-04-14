@@ -80,14 +80,14 @@ export const Testimonials = () => {
             <Avatar>
               <AvatarImage
                 alt="CEO Avatar"
-                src="https://github.com/shadcn.png"
+                src="https://www.google.com/search?sca_esv=0575d398e4833097&sxsrf=AHTn8zr_Vlk9TUfKzOBog_FSEvqcSweszg:1744611015852&q=question+mark&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBkzPWUS0OtApxR2914vrjk60CMaA0jPMd-1UByCaBk9RkR5TYqOiT6ScESjovcjoQvczWGzfl03gMqmV3swMnlaHY7h-y8maWsVlqqHOlm1aI-VEUVb8-3QW0ZUss5AXthH1HmZDs_Q0k_NzasqwQkpVyZMWLACnc0yvEfyljhT7myXSpQ&sa=X&ved=2ahUKEwif0fu-7taMAxXgRaQEHYxrGtUQtKgLegQIFRAB&biw=1920&bih=951&dpr=1#vhid=srqabUSzLOxBiM&vssid=mosaic"
               />
               <AvatarFallback>CEO</AvatarFallback>
             </Avatar>
           </div>
           <div>
-            <h3 className="text-2xl font-bold">John Doe React</h3>
-            <p className="text-muted-foreground">@john_Doe</p>
+            <h3 className="text-2xl font-bold">Harrison Choo</h3>
+            <p className="text-muted-foreground">CEO Founder</p>
           </div>
         </div>
         <p className="mt-6 text-lg leading-relaxed ">

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MedalIcon, MapIcon, PlaneIcon  } from "../components/Icons";
+import history from "../assets/history.png";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -36,11 +37,16 @@ export const HowItWorks = () => {
       className="container text-center py-24 sm:py-32"
         data-aos="fade-up"
     >
-      <h2 className="text-3xl md:text-4xl font-bold ">
+      <h2 className="text-3xl lg:text-4xl font-bold md:text-center flex items-center justify-center gap-4 ">
         Our{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           History{" "}
         </span>
+        <img
+          src={history} // Use the `image` property from the `features` array
+          alt="analytics"
+          className="w-[50px] h-[50px]" // Adjusted size for alignment
+        />
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
         
@@ -58,7 +64,7 @@ export const HowItWorks = () => {
                 {title}
               </CardTitle>
             </CardHeader>
-            <CardContent>{description}</CardContent>
+            <CardContent>  <p className="text-lg md:text-xl text-muted-foreground mt-5 justify-center">{description} </p></CardContent>
           </Card>
         ))}
       </div>

@@ -21,12 +21,15 @@ import { FAQ } from "./components/FAQ";
 import { Testimonials } from "./components/Testimonials";
 import { Statistics } from "./components/Statistics";
 import { Pricing } from "./components/Pricing";
+import { Workplace } from "./Workplace";
+
 
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
-      once: true, // Whether animation should happen only once
+      once: false, // Allow animations on scroll up
+      mirror: true, // Animate elements when scrolling up
     });
   }, []);
 
@@ -48,12 +51,13 @@ function App() {
                   <Hero />
                   <Statistics />
                   <Herotwo />
-                  <Testimonials />
-                  <Pricing /> 
+                  
+                 
                 
                   <FAQ /> 
                   <Sponsors />  
                   <ScrollToTop />
+                  
                 </>
               }
             />
@@ -72,6 +76,7 @@ function App() {
             <Route path="/about-another" element={<Aboutanotherpage />} />
           
             <Route path="/contact" element={<Contact />} />
+            <Route path="/workplace" element={<Workplace />} />
           </Routes>
         </div>
       

@@ -1,4 +1,5 @@
 import emailjs from "emailjs-com";
+import contactpic from "../assets/contact-us.png";
 
 export const Newsletter = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,11 +28,16 @@ export const Newsletter = () => {
       <hr className="w-11/12 mx-auto" />
 
       <div className="container py-24 sm:py-32">
-        <h3 className="text-center text-4xl md:text-5xl font-bold">
+        <h3 className="text-3xl lg:text-4xl font-bold md:text-center flex items-center justify-center gap-4 ">
           GET IN TOUCH{" "}
           <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
             With Us
           </span>
+          <img
+          src={contactpic} // Use the `image` property from the `features` array
+          alt="analytics"
+          className="w-[50px] h-[50px]" // Adjusted size for alignment
+        />
         </h3>
 
         {/* Contact Form Section */}
@@ -40,12 +46,12 @@ export const Newsletter = () => {
           <form onSubmit={sendEmail} className="max-w-lg mx-auto space-y-4">
             <div>
               <label htmlFor="name" className="block text-lg font-medium">
-                Name
+                Name:
               </label>
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="name" // Ensure this matches the EmailJS template variable
                 required
                 className="w-full p-2 border rounded-lg"
                 placeholder="Enter your name"
@@ -53,24 +59,24 @@ export const Newsletter = () => {
             </div>
             <div>
               <label htmlFor="address" className="block text-lg font-medium">
-                Address
+                Email Address:
               </label>
               <input
                 type="text"
                 id="address"
-                name="address"
+                name="address" // Ensure this matches the EmailJS template variable
                 required
                 className="w-full p-2 border rounded-lg"
-                placeholder="Enter your address"
+                placeholder="Enter your email address"
               />
             </div>
             <div>
               <label htmlFor="message" className="block text-lg font-medium">
-                Message
+                Message:
               </label>
               <textarea
                 id="message"
-                name="message"
+                name="message" // Ensure this matches the EmailJS template variable
                 required
                 className="w-full p-2 border rounded-lg"
                 rows={4}
@@ -89,7 +95,7 @@ export const Newsletter = () => {
         {/* Contact Information Section */}
         <div className="text-center mt-12">
           <h4 className="text-2xl font-semibold text-gray-800 dark:text-white">
-            Contact Us
+            
           </h4>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
             <span role="img" aria-label="phone">📞</span> +63 927-530-0844

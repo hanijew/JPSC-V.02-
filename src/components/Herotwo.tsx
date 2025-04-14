@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 // Import images
 import tech from "/src/assets/itservices.jpg";
-import strat from "/src/assets/strategicmanagement.png";
+import strat from "/src/assets/ms.avif";
 import taskauto from "/src/assets/taskauto.webp";
 import op from "/src/assets/operational.jpg";
 import legal from "/src/assets/legal.jpeg";
@@ -12,35 +12,35 @@ const Herotwos = [
   {
     title: "Strategic Management Services",
     description:
-      "Accelerating queries and transactions to transform data into actionable insights.",
+      "Providing corporate governance, financial oversight, and strategic direction to ensure long-term business success.",
     image: strat,
     buttonText: "Strategic Management Services",
   },
   {
     title: "Technology and Brand Management Services",
     description:
-      "Technology and Brand Management Services",
+      "Providing IT infrastructure support, technology consulting, data management, corporate branding, and market research to drive innovation and brand visibility.",
     image: tech,
     buttonText: "Technology and Brand Management Services",
   },
   {
     title: "Task Automation",
     description:
-      "Optimizing hyper-converged infrastructure for seamless virtualization.",
+      "Ensuring regulatory compliance, managing legal affairs, protecting intellectual property, and overseeing real estate investments and facilities.",
     image:  taskauto,
     buttonText: "Task Automation",
   },
   {
     title: "Operational Support Services",
     description:
-      "Accelerating queries and transactions to transform data into actionable insights.",
+      "Offering centralized procurement, supply chain management, human resources, and shared services for operational efficiency.",
     image: op,
     buttonText: "Operational Support Services",
   },
   {
     title: "Legal,Compliance, and Property Management",
     description:
-      "Driving breakthroughs in research with high-performance computing.",
+      "Managing investments, optimizing portfolios, and ensuring effective profit distribution for maximum returns.",
     image: legal,
     buttonText: "Legal,Compliance, and Property Management",
   },
@@ -113,7 +113,7 @@ export const Herotwo = () => {
       <div className="relative z-30 container mx-auto h-full flex flex-col justify-center items-start space-y-4 px-6">
         <h1 className="text-3xl md:text-4xl font-bold">{currentTopic.title}</h1>
         <p className="text-base md:text-lg text-gray-300">
-          {currentTopic.description}
+         
         </p>
         <Button
           className="bg-white text-black px-6 py-2 rounded-md"

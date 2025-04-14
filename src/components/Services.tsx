@@ -1,10 +1,10 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-
+import servicetool from "../assets/service-tools.gif";
 
 interface ServiceProps {
   title: string;
   description: string;
-  
+  gif ?: string; 
   icon?: JSX.Element;
 }
 
@@ -53,6 +53,7 @@ export const Services = () => {
               Explore the wide range of services we offer to help your business
               thrive.
             </p>
+            <img src={servicetool} alt="Service Tools" className="w-full h-auto" />
           </div>
 
           {/* Right Section: Two-column layout for service cards */}

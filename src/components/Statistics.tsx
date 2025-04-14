@@ -26,7 +26,8 @@ export const Statistics = () => {
   return (
     <section id="statistics" 
     data-aos="fade-up">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
+      
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 p-4">
         {stats.map(({ quantity, description }: statsProps) => (
           <div
             key={description}

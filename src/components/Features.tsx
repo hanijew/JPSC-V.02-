@@ -8,6 +8,8 @@ import image7 from "../assets/seven.jpg";
 import image8 from "../assets/eight.jpg";
 import image9 from "../assets/nine.jpg";
 import image10 from "../assets/ten.jpg";
+import analytics from "../assets/analytics.png"
+import {TargetmarketsExplained} from "./Targetmarkets-explained"
 import { useRef, useState } from "react";
 
 interface FeatureProps {
@@ -121,13 +123,18 @@ export const Features = () => {
       data-aos="fade-up"
     >
       <h2
-        className="text-3xl lg:text-4xl font-bold md:text-center"
+        className="text-3xl lg:text-4xl font-bold md:text-center flex items-center justify-center gap-4"
         data-aos="fade-right"
       >
         Our{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Target Markets
         </span>
+        <img
+          src={analytics}
+          alt="analytics"
+          className="w-[55px] h-[55px]" // Adjusted size for alignment
+        />
       </h2>
 
       {/* Horizontal Scrollable Slideshow */}
@@ -196,7 +203,11 @@ export const Features = () => {
             </button>
           </div>
         </div>
+       
+     
       )}
+  <TargetmarketsExplained />
     </section>
   );
+     
 };
