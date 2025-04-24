@@ -1,7 +1,7 @@
 // Import the images
-import logo from "../assets/logo.png";
+import logo from "../assets/consi/jppro.png";
 import diglogo from "../assets/diglogo.png";
-import logotwo from "../assets/logotwo.png";
+import logotwo from "../assets/consi/jpson.jpg";
 
 interface SponsorProps {
   icon: JSX.Element;

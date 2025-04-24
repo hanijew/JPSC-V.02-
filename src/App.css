@@ -195,13 +195,13 @@
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
+    font-family: 'DM Sans', sans-serif; /* Apply DM Sans to all elements */
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif; /* Ensure DM Sans is applied to the body */
   }
 }

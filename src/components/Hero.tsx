@@ -1,66 +1,74 @@
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import vid from "../assets/backgroundvi2.mp4"; // Updated to import video.mp4
+import { useState } from "react";
 
+import vid from "../assets/landscape.mp4"; // First video
+import vid2 from "../assets/landscape2.mp4"; // Second video
+import vid3 from "../assets/landscape3.mp4"; // Third video
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import logoooo from "../assets/people.png"; // Updated to import logo.jpg
 
 export const Hero = () => {
+  const [currentVideo, setCurrentVideo] = useState(vid); // State to manage the current video
+
+  const handleVideoEnd = () => {
+    // Cycle through the three videos
+    setCurrentVideo((prevVideo) => {
+      if (prevVideo === vid) return vid2; // Switch to the second video
+      if (prevVideo === vid2) return vid3; // Switch to the third video
+      return vid; // Loop back to the first video
+    });
+  };
+
   return (
     <section
-      className="relative w-full grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10"
-      data-aos="fade-up" // Animation for scrolling up and down
+      className="relative w-full h-screen flex flex-col justify-center items-center text-center space-y-10 py-20 md:py-32"
+      data-aos="fade-up"
     >
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover -z-1"
-        src={vid}// Replace with the actual path to your video
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10" // Lowered z-index to ensure video is behind content
+        src={currentVideo} // Dynamically set the video source
         autoPlay
-        loop
+        loop={false} // Disable looping for sequential playback
         muted
-        data-aos="fade-in" // Animation for video
+        onEnded={handleVideoEnd} // Handle video end to toggle videos
+        data-aos="fade-in"
       ></video>
 
       <div
-        className="text-center lg:text-start space-y-6 relative z-10"
-        data-aos="zoom-in" // Animation for text content
+        className="relative z-10 space-y-6" // Ensures content is above the video
+        data-aos="zoom-in"
       >
-        <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">
-            <span className="inline bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              JPSC
-            </span>{" "} 
-            <span className="inline bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-            Group Holdings Inc. 
-            </span>{" "}
+        <main className="text-4xl md:text-5xl font-bold text-yellow-500 bg-black/50 p-4 rounded-lg">
+          <h1>
+            <span className="block">JPSC</span>
+            <span className="block">Group Holdings Inc.</span>
           </h1>
         </main>
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0 bg-black/10 p-2 rounded-lg">
-        Building Success Through Expertise.
+        <p className="text-lg md:text-xl text-gray-200 bg-black/50 p-4 rounded-lg">
+          Welcome to JPSC Group Holdings Inc. <br />
+          Building Success Through Expertise.
         </p>
-        <p className="text-XL text-muted-foreground md:w-10/12 mx-auto lg:mx-1 bg-black/10 p-2 rounded-lg">
-          Welcome to JPSC Group Holdings Inc.
-        </p>
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button asChild className="w-full md:w-1/3">
-            <a href="/services-another">Services</a>
+
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+          <Button asChild className="w-full md:w-auto">
+            <a
+              href="/services-another"
+              className="px-6 py-3 bg-primary text-white rounded-lg w-full md:w-auto text-center"
+            >
+              Services
+            </a>
           </Button>
-          <a
-            href="/Contact"
-            className={`w-full md:w-1/3 ${buttonVariants({
-              variant: "outline",
-            })}`} 
-          >
-            Contact US
-          </a>
+          <Button asChild className="w-full md:w-auto">
+            <a
+              href="/Contact"
+              className="px-6 py-3 border border-white text-white rounded-lg w-full md:w-auto text-center"
+            >
+              Contact Us
+            </a>
+          </Button>
         </div>
       </div>
-      <img
-        src={logoooo}
-        alt="Company Logo"
-        className=" w-full h-auto"
-        data-aos="zoom-in" // Animation for logo
-      />
     </section>
   );
 };

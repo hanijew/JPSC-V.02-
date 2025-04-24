@@ -116,10 +116,10 @@ export const Herotwo = () => {
          
         </p>
         <Button
-          className="bg-white text-black px-6 py-2 rounded-md"
-          onClick={handleLearnMoreClick}
-        >
-          Learn More
+          className="text-black px-6 py-2 rounded-md"
+          
+        > <a href="/services-another" className="px-6 py-3 bg-primary text-white ">
+          Learn More </a>
         </Button>
       </div>
 

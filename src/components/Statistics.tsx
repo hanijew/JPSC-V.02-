@@ -18,7 +18,7 @@ export const Statistics = () => {
       description: "Downloads",
     },
     {
-      quantity: "4",
+      quantity: "5",
       description: "Products",
     },
   ];
@@ -33,7 +33,7 @@ export const Statistics = () => {
             key={description}
             className="space-y-3 text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold ">{quantity}</h2>
+            <h2 className="text-l sm:text-4xl font-bold ">{quantity}</h2>
             <p className="text-xl text-muted-foreground">{description}</p>
           </div>
         ))}

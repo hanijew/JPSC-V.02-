@@ -13,7 +13,7 @@ export const Newsletter = () => {
         "ARJM8CFqSKUs9l1KR" // Correct EmailJS public key
       )
       .then(
-        (result) => {
+        () => {
           alert("Message sent successfully!");
         },
         (error) => {
@@ -39,7 +39,7 @@ export const Newsletter = () => {
           className="w-[50px] h-[50px]" // Adjusted size for alignment
         />
         </h3>
-
+      
         {/* Contact Form Section */}
         <section className="container py-10">
           <h3 className="text-2xl font-bold text-center mb-6">Contact Us</h3>

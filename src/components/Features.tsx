@@ -9,7 +9,6 @@ import image8 from "../assets/eight.jpg";
 import image9 from "../assets/nine.jpg";
 import image10 from "../assets/ten.jpg";
 import analytics from "../assets/analytics.png"
-import {TargetmarketsExplained} from "./Targetmarkets-explained"
 import { useRef, useState } from "react";
 
 interface FeatureProps {
@@ -139,52 +138,37 @@ export const Features = () => {
 
       {/* Horizontal Scrollable Slideshow */}
       <div className="relative" data-aos="fade-left">
-        <button
-          onClick={scrollLeft}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full"
-        >
-          &#8592;
-        </button>
+
         <div
           ref={scrollContainerRef}
-          className="overflow-x-auto overflow-y-hidden scrollbar-hide"
-          
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <div className="flex gap-6 ">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="min-w-[350px] max-w-[350px] bg-white dark:bg-gray-900 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 cursor-pointer "
-                onClick={() => handleBoxClick(feature)}
-              >
-                {/* Image Section */}
-                <div className="w-full h-[200px] flex gap- transition-transform transform hover:scale-105 hover:shadow-lg6  ">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="w-full h-full object-cover rounded-t-lg"
-                  />
-                </div>
-
-                {/* Content Section */}
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-primary">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                    {}
-                  </p> 
-                </div>
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="bg-white dark:bg-gray-900 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 cursor-pointer"
+              onClick={() => handleBoxClick(feature)}
+            >
+              {/* Image Section */}
+              <div className="w-full h-[200px] transition-transform transform hover:scale-105 hover:shadow-lg">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-full object-cover rounded-t-lg"
+                />
               </div>
-            ))}
-          </div>
+
+              {/* Content Section */}
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-primary">{feature.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-        <button
-          onClick={scrollRight}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full"
-        >
-          &#8594;
-        </button>
+        
       </div>
 
       {/* Modal */}
@@ -206,7 +190,6 @@ export const Features = () => {
        
      
       )}
-  <TargetmarketsExplained />
     </section>
   );
      

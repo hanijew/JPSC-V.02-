@@ -14,13 +14,13 @@ import Historyanotherpage from "./History-another-page"; // Import the new page
 import Targetmarketsanotherpage from "./Targetmarkets-another-page"; // Import the new page
 import Servicesanotherpage from "./Services-another-page";
 import Contact from "./Contact"; // Import the new page
-import { Cta } from "./components/Cta";
+
 import Aboutanotherpage from "./About-another-page"; // Import the new page
 import { Herotwo } from "./components/Herotwo";
 import { FAQ } from "./components/FAQ";
-import { Testimonials } from "./components/Testimonials";
+
 import { Statistics } from "./components/Statistics";
-import { Pricing } from "./components/Pricing";
+
 import { Workplace } from "./Workplace";
 
 
@@ -82,6 +82,7 @@ function App() {
       
         {/* Footer is always displayed */}
         <Footer />
+        <ScrollToTop />
       </div>
     </Router>
   );

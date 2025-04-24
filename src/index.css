@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: 'DM Sans', sans-serif; /* Set global font to DM Sans */
 }
 
 /* HeroCards background shadow */

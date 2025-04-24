@@ -1,5 +1,6 @@
 {/* import { LogoIcon } from "./Icons"; */}
 import logo from "../assets/logo.png";
+import credits from "./credits.txt"
 
 export const Footer = () => {
   return (
@@ -29,7 +30,7 @@ export const Footer = () => {
             <span role="img" aria-label="location">📍</span> Kalayaan Ave, Makati, 1210 Metro Manila
           </p>
         </div>
-        
+       {/*
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Follow US</h3>
           <div>
@@ -101,30 +102,30 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="/about-another"
               className="opacity-60 hover:opacity-100"
             >
-              Features
+              Company
             </a>
           </div>
 
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="/missionvision-another"
               className="opacity-60 hover:opacity-100"
             >
-              Pricing
+              Mission & Vision
             </a>
           </div>
 
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="history-another"
               className="opacity-60 hover:opacity-100"
             >
-              FAQ
+              History
             </a>
           </div>
         </div>
@@ -154,13 +155,13 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href={credits}
               className="opacity-60 hover:opacity-100"
             >
-              Twitch
+              Credits
             </a>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className="container pb-14 text-center">

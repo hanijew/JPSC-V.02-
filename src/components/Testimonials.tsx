@@ -1,12 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+{/* 
 interface TestimonialProps {
   image: string;
   name: string;
@@ -57,7 +50,7 @@ const testimonials: TestimonialProps[] = [
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
-];
+];*/}
 
 export const Testimonials = () => {
   return (
@@ -91,10 +84,13 @@ export const Testimonials = () => {
           </div>
         </div>
         <p className="mt-6 text-lg leading-relaxed ">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."
+        "At JPSC Group Holdings Inc., we see challenges as opportunities and innovation as the key to transformation.  
+In today’s dynamic business environment, adaptability, insight, and strategy aren’t just advantages—they’re necessities. 
+That’s why we invest in forward-thinking solutions and strategic partnerships that empower our portfolio companies to lead in their respective industries.
+
+From financial services and consulting to technology and development, our team is driven by a commitment to excellence and sustainable growth. 
+Whether you're looking to collaborate, invest, or evolve, JPSC Group Holdings is your trusted partner in building a resilient and future-ready enterprise."
+
         </p>
       </div>
     </section>
