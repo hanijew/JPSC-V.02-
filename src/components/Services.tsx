@@ -1,5 +1,4 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import servicetool from "../assets/service-tools.gif";
+
 import managementservice from "../assets/consi/management-consulting.gif";
 import operational from "../assets/consi/operational-services.gif";
 import technology from "../assets/consi/technological.gif";

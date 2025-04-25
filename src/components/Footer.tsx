@@ -1,6 +1,6 @@
 {/* import { LogoIcon } from "./Icons"; */}
 import logo from "../assets/logo.png";
-import credits from "./credits.txt"
+
 
 export const Footer = () => {
   return (

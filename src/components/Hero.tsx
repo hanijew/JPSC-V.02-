@@ -1,24 +1,8 @@
 import { Button } from "./ui/button";
-import { useState } from "react";
-
-import vid from "../assets/landscape.mp4"; // First video
-import vid2 from "../assets/landscape2.mp4"; // Second video
-import vid3 from "../assets/landscape3.mp4"; // Third video
+import vid from "../assets/landscape.mp4"; // Single video
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import logoooo from "../assets/people.png"; // Updated to import logo.jpg
 
 export const Hero = () => {
-  const [currentVideo, setCurrentVideo] = useState(vid); // State to manage the current video
-
-  const handleVideoEnd = () => {
-    // Cycle through the three videos
-    setCurrentVideo((prevVideo) => {
-      if (prevVideo === vid) return vid2; // Switch to the second video
-      if (prevVideo === vid2) return vid3; // Switch to the third video
-      return vid; // Loop back to the first video
-    });
-  };
-
   return (
     <section
       className="relative w-full h-screen flex flex-col justify-center items-center text-center space-y-10 py-20 md:py-32"
@@ -27,11 +11,10 @@ export const Hero = () => {
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover -z-10" // Lowered z-index to ensure video is behind content
-        src={currentVideo} // Dynamically set the video source
+        src={vid} // Single video source
         autoPlay
-        loop={false} // Disable looping for sequential playback
+        loop // Enable looping for the video
         muted
-        onEnded={handleVideoEnd} // Handle video end to toggle videos
         data-aos="fade-in"
       ></video>
 

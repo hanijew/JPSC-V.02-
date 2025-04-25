@@ -71,9 +71,7 @@ export const Herotwo = () => {
     setIsPreviewOpen(false); // Close the preview modal
   };
 
-  const handleLearnMoreClick = () => {
-    setIsLearnMoreOpen(true); // Open the Learn More modal
-  };
+
 
   const handleCloseLearnMore = () => {
     setIsLearnMoreOpen(false); // Close the Learn More modal

@@ -33,12 +33,7 @@ export const Cta = () => {
           >
             View Company Profile
           </a>
-          <Button
-            variant="outline"
-            className="w-full md:w-auto"
-          >
-            View all features
-          </Button>
+        
         </div>
       </div>
     </section>
